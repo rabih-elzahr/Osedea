@@ -128,6 +128,7 @@ I modified the 'view/index.jade' template:
  - I modified the password input field to make it required, then I added the osd-error default tag inside the osd-field tag to display proper error messages if the user attempts to submit the form without specifiying a password 
  - I modified the password to have a minimum of 6 characters, then I added the osd-error with error-type 'minLength' inside the osd-field tag to display proper error messages if the user attempts to submit the form with a password that contains less than 6 characters
 
+```html
     <div ng-controller="loginCtrl">
         <form name="osedeaLogin" osd-submit="submit()" novalidate>
             <div class="form-group">
@@ -152,6 +153,7 @@ I modified the 'view/index.jade' template:
             </div>
         </form>
     </div>
+```
 
 #Step 9
 
