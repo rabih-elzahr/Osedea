@@ -159,19 +159,19 @@ I modified the 'view/index.jade' template:
 
 I added a new route in 'routes/index.js' to handle the login post
 
-router.post('/login', function(req, res,next){
-	var username=req.body.username,
-		password=req.body.password;
-
-	// Authorized user
-	res.status(200).json({username: username, password: password});
-
-	// Unauthorized user
-	// res.status(401).json({message:'Unauthorized',username: username, password: password});
-
-	// Unknown Error
-	// res.status(400).json({username: username, password: password});
-});
+	router.post('/login', function(req, res,next){
+		var username=req.body.username,
+			password=req.body.password;
+	
+		// Authorized user
+		res.status(200).json({username: username, password: password});
+	
+		// Unauthorized user
+		// res.status(401).json({message:'Unauthorized',username: username, password: password});
+	
+		// Unknown Error
+		// res.status(400).json({username: username, password: password});
+	});
 
 ###Important note
 
