@@ -28,18 +28,27 @@ block content
             To submit your solution, simply zip the project and email it back to us. Please include a brief summary of your approach to the problem in your email. Good luck!
         </p>
         <hr>
-        <form>
-            <div class="form-group">
-                <label class="control-label">Username</label>
-                <input type="text" name="username" class="form-control"/>
-            </div>
-            <div class="form-group">
-                <label class="control-label">Password</label>
-                <input type="password" name="password" class="form-control"/>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary">
-                    Submit
-                </button>
-            </div>
-        </form>
+        <div ng-controller="loginCtrl">
+            <form name="osedeaLogin" osd-submit="submit()" novalidate>
+                <div class="form-group">
+                    <label class="control-label">Username</label>
+                    <osd-field attr="username">
+                        <input type="text" name="username" class="form-control" ng-model="data.username" required="required" />
+                        <osd-error msg="Username is required!"></osd-error>
+                    </osd-field>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Password</label>
+                    <osd-field attr="password">
+                        <input type="password" name="password" minLength="6" maxlength="12" class="form-control" ng-model="data.password" required="required" />
+                        <osd-error msg="Password is required!"></osd-error>
+                        <osd-error error-type="minlength" msg="Password must contain atleast 6 characters"></osd-error>
+                    </osd-field>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
