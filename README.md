@@ -37,7 +37,7 @@ I modified the "bower.json" file to include the latest version of "angular-osd-f
 
 ###Step 3
 
-I executed "bower install" to install the latest version of "angular-osd-form", "ng-lodash" and "ng-messages"
+I executed "bower install" to install the latest version of "angular-osd-form" and "ng-lodash"
 
 ###Step 4
 
